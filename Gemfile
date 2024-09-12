@@ -13,4 +13,4 @@ gem "rubocop", "~> 1.21"
 
 gem 'activerecord', '~> 6.0'
 
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.4'
