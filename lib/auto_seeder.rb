@@ -69,7 +69,12 @@ module AutoSeeder
   end
 
   def self.handle_has_many_association(association, model)
-    2.times { association.klass.create!(name: Faker::Name.name, model.foreign_key => model.id) }
+    foreign_key = association.foreign_key
+    model_id = model.id
+
+    2.times do
+      association.klass.create!(name: Faker::Name.name, "#{foreign_key}" => model_id)
+    end
   end
 
   def self.skip_column?(column_name)
