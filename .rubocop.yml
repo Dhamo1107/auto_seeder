@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 3.0
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Lint/ScriptPermission:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20

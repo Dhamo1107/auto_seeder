@@ -1,0 +1,7 @@
+# frozen_string_literal: true
+
+#!/usr/bin/env ruby
+
+require 'auto_seeder/cli'
+
+AutoSeeder::CLI.start(ARGV)
