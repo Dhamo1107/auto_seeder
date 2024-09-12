@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
-require "auto_seeder"
+require 'active_record'
+require 'sqlite3'  # In-memory SQLite for tests
+require 'auto_seeder'
+
+# Configure ActiveRecord to use an in-memory SQLite3 database
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: ':memory:')
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
